@@ -1,13 +1,15 @@
+//vars
 const firstScreen = document.querySelector(".first-screen")
 const secondScreen = document.querySelector(".second-screen")
 const btnTry = document.querySelector("#btnTry")
 const btnTryAgain = document.querySelector("#btnTryAgain")
-
 var tries = 0;
 
+//events
 btnTry.addEventListener("click", handleClickTry)
 btnTryAgain.addEventListener("click", handleClickTryAgain)
 
+//functions
 function handleClickTry(event) {
     event.preventDefault()
 
@@ -19,14 +21,17 @@ function handleClickTry(event) {
         var triesShow = document.querySelector("h2")
         triesShow.innerText = `Acertou em ${tries} tentativas`
 
-        firstScreen.classList.toggle("hide")
-        secondScreen.classList.toggle("hide")
+        toggleScreen()
     } 
     inputNumber.value = ""
 }
 
 function handleClickTryAgain() {
     tries = 0;
-    secondScreen.classList.toggle("hide")
+    toggleScreen()
+}
+
+function toggleScreen() {
     firstScreen.classList.toggle("hide")
+    secondScreen.classList.toggle("hide")
 }
