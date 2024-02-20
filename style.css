@@ -10,8 +10,10 @@
     
     --linear-background-body: #C2E9FB, #A1C4FD;
     --color-white: #FFFFFF;
+    --color-white-soft: #DCE2E9;
     --color-blue-title: #34355B;
     --color-blue-text: #34355bcb;
+    --color-purple: #7879F1;
 }
 
 html, body, input {
@@ -35,7 +37,8 @@ body {
     grid-template-columns: 1fr;
     place-items: center;
 
-    width: min(42.8rem, 90%);
+    width: 42.8rem;
+    height: 27.3rem;
 
     padding: 4.8rem 6.4rem 6.4rem;
 
@@ -60,4 +63,29 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+}
+
+form {
+    display: flex;
+}
+
+form input, button {
+    border: none;
+    padding: 1.6rem;
+}
+
+input {
+    background-color: var(--color-white-soft);
+    width: 6rem;
+
+    border-radius: 0.4rem 0rem 0rem 0.4rem;
+}
+
+button {
+    background-color: var(--color-purple);
+    
+    color: var(--color-white);
+    font-weight: bold;
+
+    border-radius: 0rem 0.4rem 0.4rem 0rem;
 }
