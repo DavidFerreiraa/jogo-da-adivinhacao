@@ -14,20 +14,20 @@
 </head>
 <body>
     <main class="try">
-        <div class="first-screen hide">
+        <div class="first-screen">
             <div class="description">
                 <h1>Jogo da Adivinhação</h1>
                 <p> Adivinhe o número entre 0 e 10</p>
             </div>
     
             <form action="">
-                <input type="number" name="tentativa"/>
-                <button type="submit">Tentar</button>
+                <input type="number" name="tentativa" id="inputNumber"/>
+                <button type="submit" onclick="handleClickTry(event)">Tentar</button>
             </form>
         </div>
-        <div class="second-screen">
+        <div class="second-screen hide">
             <h2>Acertou em 3 tentativas!</h2>
-            <button>Jogar novamente</button>
+            <button onclick="handleClickTryAgain()">Jogar novamente</button>
         </div>
     </main>
     <script src="./main.js"></script>
