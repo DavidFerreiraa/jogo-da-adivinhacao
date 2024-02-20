@@ -3,18 +3,20 @@ const firstScreen = document.querySelector(".first-screen")
 const secondScreen = document.querySelector(".second-screen")
 const btnTry = document.querySelector("#btnTry")
 const btnTryAgain = document.querySelector("#btnTryAgain")
+let randomNumber = Math.round(Math.random() * 10)
 var tries = 0;
 
 //events
 btnTry.addEventListener("click", handleClickTry)
 btnTryAgain.addEventListener("click", handleClickTryAgain)
+document.addEventListener("keydown", (event) => {firstScreen.classList.contains("hide") &&  event.key == "Enter" && handleClickTryAgain() 
+})
 
 //functions
 function handleClickTry(event) {
     event.preventDefault()
 
     const inputNumber = document.querySelector("#inputNumber")
-    const randomNumber = Math.round(Math.random() * 10)
 
     tries++
     if (inputNumber.value == randomNumber) {
@@ -29,6 +31,7 @@ function handleClickTry(event) {
 function handleClickTryAgain() {
     tries = 0;
     toggleScreen()
+    randomNumber = Math.round(Math.random() * 10)
 }
 
 function toggleScreen() {
