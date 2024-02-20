@@ -13,10 +13,11 @@
     --color-white-soft: #DCE2E9;
     --color-blue-title: #34355B;
     --color-blue-text: #34355bcb;
-    --color-purple: #7879F1;
+    --color-purple-500: #7879F1;
+    --color-purple-700: #5b5bb3;
 }
 
-html, body, input {
+html, body, input, button {
     font-family: 'montserrat', sans-serif;
 }
 
@@ -54,6 +55,11 @@ body {
     color: var(--color-blue-title);
 }
 
+.try h2 {
+    font-family: 'DM sans', 'montserrat', sans-serif;
+    font-weight: 400;
+}
+
 .try p {
     line-height: 150%;
     color: var(--color-blue-text);
@@ -67,6 +73,8 @@ body {
 
 form {
     display: flex;
+    justify-content: center;
+    padding-top: 4.8rem;
 }
 
 form input, button {
@@ -82,10 +90,29 @@ input {
 }
 
 button {
-    background-color: var(--color-purple);
+    background-color: var(--color-purple-500);
     
     color: var(--color-white);
     font-weight: bold;
 
     border-radius: 0rem 0.4rem 0.4rem 0rem;
+
+    cursor: pointer;
+
+    transition: background .3s;
+}
+
+button:hover {
+    background-color: var(--color-purple-700);
+}
+
+.second-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.3rem;
+}
+
+.hide {
+    display: none;
 }
